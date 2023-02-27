@@ -1,0 +1,9 @@
+{
+  "Package": {
+    "Name": "Build Pipeline for LCU Package Sites",
+    "Description": "An LCU for installing a build pipeline for lcu package sites.",
+    "Image": "https://www.fathym.com/assets/images/logo.png",
+    "PreviewImage": "https://www.fathym.com/assets/images/logo.png",
+    "SkipProject": true
+  }
+}

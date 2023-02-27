@@ -1,0 +1,27 @@
+{
+  "Environments": {
+    "$#.PrimaryEnvironment": {
+      "Artifacts": {
+        "lcu-package-build-release": {
+          "Name": "LCU Package Build/Release",
+          "Output": "./",
+          "Type": "GitHub",
+          "BuildCommand": "npm run build",
+          "InstallCommand": "npm ci",
+          "NPMRegistry": "https://registry.npmjs.org/"
+        }
+      },
+      "DevOpsActions": {
+        "github-artifacts-release-root-static": {
+          "Name": "GitHub Artifacts - Release - LCU Package",
+          "Path": "lcu-release.yml",
+          "ArtifactLookups": ["lcu-package-build-release"],
+          "Templates": [
+            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/_header.hbs.yml",
+            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/release-flow.yml"
+          ]
+        }
+      }
+    }
+  }
+}
